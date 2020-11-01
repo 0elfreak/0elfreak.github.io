@@ -1,0 +1,147 @@
+* {
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+	-moz-transition-property: all;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+@font-face {
+  font-family: 'relogio'; /*a name to be used later*/
+  src: url('../fonts/relogio.TTF'); /*URL to font*/
+}
+
+body{
+  background:#1b1b2b;
+  padding:75px;
+  text-align:center;
+  font-family: 'Oswald', sans-serif;
+  
+}
+
+.menu h1{
+  color:#c0c0c0;
+  font-weight:100;
+}
+
+.menu .btn{
+  color:#999;
+  background:rgba(0, 0, 0, 0.5);
+  padding:10px 20px;
+  font-size:12px;
+  text-decoration:none;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.menu .btn:hover{
+  border:none;
+  background:rgba(0, 0, 0, 0.4);
+  background:#fff;
+  padding:20px 20px;
+  color:#1b1b1b;
+}
+.menu .footer{
+  font-size:8px;
+  color:#fff;
+  clear:both;
+  display:block;
+  letter-spacing:5px;
+  border:1px solid #fff;
+  padding:5px;
+  text-decoration:none;
+  width:210px;
+  margin:auto;
+  margin-top:400px;
+}
+.sometimes h2{
+    font-family:"Ink free";
+    color: rgb(255, 255, 255);
+    opacity: 0.3;
+}
+.siteswriteups ul{
+  text-align: left;
+}
+.sites ul{
+  text-align: left;
+}
+.sites a{
+  font-size: x-large;
+  text-decoration: none;
+  color:#999;
+  background:rgba(0, 0, 0, 0.5);
+  padding:10px 20px;
+  font-size:12px;
+  text-decoration:none;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.sites a:hover{
+  border:none;
+  background:rgba(0, 0, 0, 0.4);
+  background:#fff;
+  padding:20px 20px;
+  color:#1b1b1b;
+}
+.siteswriteups a{
+  font-size: x-large;
+  text-decoration: none;
+
+}
+.conhecer h2{
+  font-size: x-large;
+  text-decoration: none;
+  color:white;
+  background:rgba(0, 0, 0, 0.5);
+  padding:10px 20px;
+  font-size:12px;
+  text-decoration:none;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.conhecer h2:hover{
+  border:none;
+  background:rgba(0, 0, 0, 0.4);
+  background:#fff;
+  padding:20px 20px;
+  color:#1b1b1b;
+}
+.conhecer p{
+  color: white;
+  font-size: medium;
+  text-align: left;
+  font-family: serif;
+}
+.redText 
+{ 
+    color: red; 
+
+} 
+.sobre{
+  float: inline-start;
+  margin-top: 50px;
+  color:white;
+  width: 320px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.avatar{
+  display: inherit;
+  border-radius: inherit;
+}
+.exploiteducation a{
+ font-family: "relogio"; 
+ color:greenyellow;
+}
+.exploiteducation{
+  font-family: "relogio"; 
+  color:greenyellow;
+ }
+ .reversingtitulos a{
+  font-family: monospace;
+  color: white;
+ }
+ .writeup h1{
+   color: whitesmoke;
+ }
+.writeup h3{
+  color: whitesmoke;
+}

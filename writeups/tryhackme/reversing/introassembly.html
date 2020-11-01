@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179026767-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-179026767-1');
+</script>
+    </head>
+    <body>
+        
+        <div class="menu">
+            <a href="../../../index.html"style="text-decoration: none;"><h1>~high tech low life</h1></a>
+            <a href="../../../index.html" class="btn">el freak</a>
+            <a href="../../../writeups/index.html" class="btn">writeupz</a>
+         </div>   
+            
+        <div class="sometimes">
+            <h2>
+                <marquee behavior="scroll" direction="left">eletronic mind</marquee>
+                
+            </h2>
+        </div>
+        <div class="siteswriteups">
+            <ul>
+                <div class="writeup">
+                    <h1>
+                        Tarefa 4
+                    </h1>
+                    <h3>
+                        #1
+                        <p>Em esta pergunta é nos perguntado qual é o valor da variavel com o nome <code>var_8h</code> antes das instruções <code>popq</code> e <code>ret</code>.</p>
+                        <br>
+                        <img src="../../../imagens/intro1.PNG" alt="">
+                        <br>
+                        Bem primeiro o programa começa por declarar 3 variáveis. (Instrução <code>mov</code> ) <br>
+                        <code>
+                            var_ch = 0 <br>
+                            var_8h = 99 (63 em hex) <br>
+                            var_4h = 1000 (3e8 em hex)  <br>
+                        </code>
+                        Depois de fazer isso move o valor de <code>var_ch</code> para <code>eax</code> <br>
+                        Depois compara <code>eax (valor de var_ch)</code> com a variável <code>var_8h (valor de 99)</code> que basicamente o que vai fazer é subtrair os dois se forem iguais vai ser sempre 0. E se forem iguais a flag <code>ZERO FLAG</code> vai ser true. <br>
+                        Depois usa a instrução <code>JGE</code> que quer dizer <code>jump if condition greater or equal</code>  ou seja se for maior ou igual salta para o endereço 0x629 que é falso (<code>0>=99 == FALSO</code>) então segue o programa <br>
+                        Depois <code>eax</code> é igual a var_8h <code>(99)</code> e faz a mesma comparação e volta a ver falso então não faz o salto para o endereço. <br>
+                        Depois faz uma operação binária chamada <code>and</code> usei uma calculadora online para se tornar mais fácil. <br>
+                        <img src="../../../imagens/intro2.PNG">
+                         <br>
+                         Que nos dá o valor de 96 e depois de isso não usamos mais a variável var_8h portanto a resposta é <code>96</code>
+                        <br> <br>
+                        #2 <br>
+                        A segunda pergunta é nos perguntado qual o valor de 0 antes das intruções <code>pop</code> e <code>ret</code> ou seja antes de a função terminar.
+                        <br>
+                        <br>
+                        <img src="../../../imagens/intro1.PNG" alt="">
+                        <br>
+                        E como podemos ver o valor de <code>var_ch</code> só muda uma vez que é <code>var_ch=0</code> portanto a resposta é 0. <br>
+                        <br> <br>
+                        #3 <br>
+                        A terceira pergunta quer saber qual o valor de <code>var_4h</code> antes da função terminar.
+                        <br>
+                        <img src="../../../imagens/intro1.PNG" alt=""> <br>
+                        Então primeiro a variável <code>var_4h</code> é igual a 1000. <code>0x60c</code> <br> 
+                        Depois compara <code>0>=99</code> que é falso. <code>0x61b</code>
+                        <br>
+                        Depois compara <code>99>=1000</code> que é falso. <code>0x621</code>
+                        <br>
+                        Depois faz um salto para o endereço <code>0x630</code>
+                        <br>
+                        Que subtrai <code>var_4h</code> por <code>0x3e7 ou 999</code>
+                        <br>
+                        E o resultado da variavel <code>var_4h</code> fica <code>1</code>
+                        <br>
+                        A reposta fica então <code>1</code>
+                        <br><br>
+                        #4 <br>
+                        A quarta e ultima pergunta qual é o simbolo do <code>AND</code> entre estes (+, -, *, /, &, |)
+                        <br>
+                        Reposta: <code>&</code>
+                    </h3>
+                </div>
+            </ul>
+         </div>   
+
+    </body>
+</html>
