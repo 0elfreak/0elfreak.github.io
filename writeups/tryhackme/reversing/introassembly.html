@@ -1,104 +1,211 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="../../../css/main.css">
-<!-- Matomo -->
-<script type="text/javascript">
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="https://elfreak0.matomo.cloud/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '1']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/elfreak0.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
-  </script>
-  <!-- End Matomo Code -->
-  
-    </head>
-    <body>
-        
-        <div class="menu">
-            <a href="../../../index.html"style="text-decoration: none;"><h1>~high tech low life</h1></a>
-            <a href="../../../index.html" class="btn">el freak</a>
-            <a href="../../../writeups/index.html" class="btn">writeupz</a>
-         </div>   
-            
-        <div class="sometimes">
-            <h2>
-                <marquee behavior="scroll" direction="left">eletronic mind</marquee>
-                
-            </h2>
-        </div>
-        <div class="siteswriteups">
-            <ul>
-                <div class="writeup">
-                    <h1>
-                        Tarefa 4
-                    </h1>
-                    <h3>
-                        #1
-                    </h3>
-                        <p>Em esta pergunta é nos perguntado qual é o valor da variavel com o nome <code>var_8h</code> antes das instruções <code>popq</code> e <code>ret</code>.</p>
-                        <br>
-                        <img src="../../../imagens/intro1.PNG" alt="">
-                        <br>
-                        Bem primeiro o programa começa por declarar 3 variáveis. (Instrução <code>mov</code> ) <br>
-                        <code>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+    <!-- Matomo -->
+    <script type="text/javascript">
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "https://elfreak0.matomo.cloud/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript'; g.async = true; g.src = '//cdn.matomo.cloud/elfreak0.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+    <script data-ad-client="ca-pub-6804273117501697" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+
+    <div class="menu">
+        <a href="../../../index.html" style="text-decoration: none;">
+            <h1>~high tech low life</h1>
+        </a>
+        <a href="../../../index.html" class="btn">el freak</a>
+        <a href="../../../writeups/index.html" class="btn">writeupz</a>
+    </div>
+
+    <div class="sometimes">
+        <h2>
+            <marquee behavior="scroll" direction="left">eletronic mind</marquee>
+
+        </h2>
+    </div>
+    <div class="siteswriteups">
+        <ul>
+            <div class="writeup">
+                <h1>
+                    Tarefa 4
+                </h1>
+                <h3>
+                    #1
+                </h3>
+                <p>Em esta pergunta é nos perguntado qual é o valor da variavel com o nome <code>var_8h</code> antes das
+                    instruções <code>popq</code> e <code>ret</code>.</p>
+                <br>
+                <img src="../../../imagens/intro1.PNG" alt="">
+                <br>
+                Bem primeiro o programa começa por declarar 3 variáveis. (Instrução <code>mov</code> ) <br>
+                <code>
                             var_ch = 0 <br>
                             var_8h = 99 (63 em hex) <br>
                             var_4h = 1000 (3e8 em hex)  <br>
                         </code>
-                        Depois de fazer isso move o valor de <code>var_ch</code> para <code>eax</code> <br>
-                        Depois compara <code>eax (valor de var_ch)</code> com a variável <code>var_8h (valor de 99)</code> que basicamente o que vai fazer é subtrair os dois se forem iguais vai ser sempre 0. E se forem iguais a flag <code>ZERO FLAG</code> vai ser true. <br>
-                        Depois usa a instrução <code>JGE</code> que quer dizer <code>jump if condition greater or equal</code>  ou seja se for maior ou igual salta para o endereço 0x629 que é falso (<code>0>=99 == FALSO</code>) então segue o programa <br>
-                        Depois <code>eax</code> é igual a var_8h <code>(99)</code> e faz a mesma comparação e volta a ver falso então não faz o salto para o endereço. <br>
-                        Depois faz uma operação binária chamada <code>and</code> usei uma calculadora online para se tornar mais fácil. <br>
-                        <img src="../../../imagens/intro2.PNG">
-                         <br>
-                         Que nos dá o valor de 96 e depois de isso não usamos mais a variável var_8h portanto a resposta é <code>96</code>
-                        <br>
-                        <br>
-                        <h3>
-                            #2
-                        </h3>
-                        <br>
-                        A segunda pergunta é nos perguntado qual o valor de 0 antes das intruções <code>pop</code> e <code>ret</code> ou seja antes de a função terminar.
-                        <br>
-                        <br>
-                        <img src="../../../imagens/intro1.PNG" alt="">
-                        <br>
-                        E como podemos ver o valor de <code>var_ch</code> só muda uma vez que é <code>var_ch=0</code> portanto a resposta é 0. <br>
-                        <br>
-                         <br>
-                        <h3>#3</h3> <br>
-                        A terceira pergunta quer saber qual o valor de <code>var_4h</code> antes da função terminar.
-                        <br>
-                        <img src="../../../imagens/intro1.PNG" alt=""> <br>
-                        Então primeiro a variável <code>var_4h</code> é igual a 1000. <code>0x60c</code> <br> 
-                        Depois compara <code>0>=99</code> que é falso. <code>0x61b</code>
-                        <br>
-                        Depois compara <code>99>=1000</code> que é falso. <code>0x621</code>
-                        <br>
-                        Depois faz um salto para o endereço <code>0x630</code>
-                        <br>
-                        Que subtrai <code>var_4h</code> por <code>0x3e7 ou 999</code>
-                        <br>
-                        E o resultado da variavel <code>var_4h</code> fica <code>1</code>
-                        <br>
-                        A reposta fica então <code>1</code>
-                        <br><br>
-                        <h3>#4</h3>
-                        <br>
-                        A quarta e ultima pergunta qual é o simbolo do <code>AND</code> entre estes (+, -, *, /, &, |)
-                        <br>
-                        Reposta: <code>&</code>
-                </div>
-            </ul>
-         </div>   
+                Depois de fazer isso move o valor de <code>var_ch</code> para <code>eax</code> <br>
+                Depois compara <code>eax (valor de var_ch)</code> com a variável <code>var_8h (valor de 99)</code> que
+                basicamente o que vai fazer é subtrair os dois se forem iguais vai ser sempre 0. E se forem iguais a
+                flag <code>ZERO FLAG</code> vai ser true. <br>
+                Depois usa a instrução <code>JGE</code> que quer dizer <code>jump if condition greater or equal</code>
+                ou seja se for maior ou igual salta para o endereço 0x629 que é falso (<code>0>=99 == FALSO</code>)
+                então segue o programa <br>
+                Depois <code>eax</code> é igual a var_8h <code>(99)</code> e faz a mesma comparação e volta a ver falso
+                então não faz o salto para o endereço. <br>
+                Depois faz uma operação binária chamada <code>and</code> usei uma calculadora online para se tornar mais
+                fácil. <br>
+                <img src="../../../imagens/intro2.PNG">
+                <br>
+                Que nos dá o valor de 96 e depois de isso não usamos mais a variável var_8h portanto a resposta é
+                <code>96</code>
+                <br>
+                <br>
+                <h3>
+                    #2
+                </h3>
+                <br>
+                A segunda pergunta é nos perguntado qual o valor de 0 antes das intruções <code>pop</code> e
+                <code>ret</code> ou seja antes de a função terminar.
+                <br>
+                <br>
+                <img src="../../../imagens/intro1.PNG" alt="">
+                <br>
+                E como podemos ver o valor de <code>var_ch</code> só muda uma vez que é <code>var_ch=0</code> portanto a
+                resposta é 0. <br>
+                <br>
+                <br>
+                <h3>#3</h3> <br>
+                A terceira pergunta quer saber qual o valor de <code>var_4h</code> antes da função terminar.
+                <br>
+                <img src="../../../imagens/intro1.PNG" alt=""> <br>
+                Então primeiro a variável <code>var_4h</code> é igual a 1000. <code>0x60c</code> <br>
+                Depois compara <code>0>=99</code> que é falso. <code>0x61b</code>
+                <br>
+                Depois compara <code>99>=1000</code> que é falso. <code>0x621</code>
+                <br>
+                Depois faz um salto para o endereço <code>0x630</code>
+                <br>
+                Que subtrai <code>var_4h</code> por <code>0x3e7 ou 999</code>
+                <br>
+                E o resultado da variavel <code>var_4h</code> fica <code>1</code>
+                <br>
+                A reposta fica então <code>1</code>
+                <br><br>
+                <h3>#4</h3>
+                <br>
+                A quarta e ultima pergunta qual é o simbolo do <code>AND</code> entre estes (+, -, *, /, &, |)
+                <br>
+                Reposta: <code>&</code>
+                <h1>
+                    Tarefa 5
+                </h1>
+                <br>
+                <img src="../../../imagens/intro6.PNG" alt="">
+                <br>
+                Então são declaradas 3 variáveis <code>  <br> var_8h <br> var_ch <br> var_4h <br>
+                       </code> Depois o programa salta para o endereço <code>0x62f</code> (jmp 0x62f)
+                <br>
+                Depois de isso compara a variável <code>var_4h</code> que tem o valor de <code>0</code> com
+                <code>22</code> se for menor ou igual vai para o endereço 0x61c. <code>jle = jump if low or equal</code>
+                Como é verdade vai saltar para o endereço <code>0x61c</code>
+                Depois no endereço <code>0x61c</code> vai fazer a operação binária <code>AND</code> na variável
+                <code>var_ch</code> que tem o valor de <code>14</code> depois de essa operação essa variável fica com o
+                valor de <code>0</code>
+                <img src="../../../imagens/intro3.PNG" width="40%" alt="">
+                <br>
+                <br>
+                Depois faz a operação lógica <code>SAR</code> com o valor de 1 na variavél <code>var_8h</code> que dá o
+                resultado <code>11</code>
+                <img src="../../../imagens/intro4.PNG">
+                <br>
+                Feito isso mete o valor de <code>var_4h</code> em <code>edx</code> e depois <code>edx</code> em
+                <code>eax</code> ou seja <code>eax = 4</code>
+                depois adiciona <code>eax + eax</code> que dá 8. <br>
+                Depois adiciona <code>eax + edx</code> que dá 12 <br>
+                Depois move <code>eax</code> para a variável <code>var_4h</code>
+                <br>
+                E compara <code>var_4h</code> e compara com 22 outra vez e vê se é menor ou igual com é verdade salta
+                para o endereço <code>0x61c</code>
+                <br>
+                Depois faz novamente o mesmo <br>
+                Faz a operação lógica <code>AND</code> na variável <code>var_ch</code>
+                que volta a dar zero. <br>
 
-    </body>
+                <img src="../../../imagens/intro5.PNG"> <br>
+                Operação lógica na variável <code>var_8h</code> que dá 5. <br>
+                E já vamos na segunda volta por isso já temos a resposta nr 1
+                <br>
+                <h3>
+                    Resposta #1 = 5
+                </h3>
+                Também nos é perguntado qual o valor de <code>var_ch</code> na segunda volta do loop e nós já sabemos é
+                0.
+                <h3>
+                    Resposta #2 = 0
+                </h3>
+                Depois é nos pergunta qual o valor de <code>var_8h</code> antes de sair da função. <br>
+                Então vamos continuar a ler o programa. <br>
+                Depois adiciona 8 (que são basicamente todas as operações feitas anteriormente) á variavel
+                <code>var_4h</code> que dá 12+8=20.
+                <br>
+                Depois vai comparar com 22 e ver se é menor ou igual se for volta para o endereço 0x61c
+                <br>
+                E é verdade então volta a fazer os calculos.
+                <br>
+                Faz a operação lógica AND na variavél var_ch que é 0.
+                <br>
+                Faz o bit shift na var_8 que dá 2.
+                <br>
+                Ou seja depois var_4h vai ser maior que 22 por isso esta é a ultima vez do loop.
+                <br>
+                <h3>
+                    Resposta #3 = 2
+                </h3>
+                <br>
+                Depois é nos perguntado qual o valor de var_ch. E já sabemos que vai é 0.
+                <br>
+                <h3>
+                    Resposta #4 = 0
+                </h3>
+                <br>
+
+                <h1>
+                    Tarefa 6
+                </h1>
+                <br>
+                Nesta tarefa temos de fazer um simples crackme.
+                <img src="../../../imagens/intro7.PNG" alt="">
+                <br>
+                Bem eu vou usar a técnica das funções vou ver as funções  usadas para poder imaginar o que está a acontecer.
+                <br>
+                Então primeiro temos a função <code>call sym.imp.puts </code> que provavelmente é a função a pedir a palavra passe do crackme. <code>enter your password</code>
+                <br>
+                Depois temos a função <code>scanf</code>
+                <br>
+                Depois a função <code>call sym.imp.strlen </code> que server para nos dizer  quantos caracteres tem um palavra.
+                <br>
+                Depois a função <code>call sym.imp.strtok </code>  que separa as palavras por um caracter mais info em - <a href="https://www.tutorialspoint.com/c_standard_library/c_function_strtok.htm">https://www.tutorialspoint.com/c_standard_library/c_function_strtok.htm</a> <br>
+                Depois a função <code>strcmp</code> que compara duas strings.
+                <br>
+                
+            </div>
+        </ul>
+    </div>
+
+</body>
+
 </html>
